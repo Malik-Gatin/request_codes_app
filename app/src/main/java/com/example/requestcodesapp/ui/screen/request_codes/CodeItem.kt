@@ -1,9 +1,9 @@
-package com.example.requestcodesapp.ui
+package com.example.requestcodesapp.ui.screen.request_codes
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,12 +34,12 @@ fun CodeItem(
             color = textColor
         )
         CircularProgressIndicator(
-            progress = timerProgress,
+            progress = { timerProgress },
             modifier = Modifier.size(24.dp),
             strokeWidth = 2.dp
         )
     }
-    Divider(color = Color.LightGray, thickness = 1.dp)
+    HorizontalDivider(thickness = 1.dp, color = Color.LightGray)
 
 }
 
